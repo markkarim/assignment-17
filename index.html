@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link
+      rel="icon"
+      href="./photo/pngtree-weather-blue-glossy-icon-on-white-background-glossy-png-image_10073348.png" />
+
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand py-4" href="./index.html">
+          <div class="w-50 d-flex justify-content-center align-items-center">
+            <figure class="m-0 me-2">
+              <img
+                src="./photo/logo@2x.png"
+                class="img-fluid"
+                alt="Weatherlogo" />
+            </figure>
+            <div class="w-25">
+              <p class="m-0 text-white fs-5">Weather</p>
+              <p class="m-0 text-white fw-light fs-6">tagline goes here</p>
+            </div>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="me-md-4 nav-item">
+              <a class="nav-link coon" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="me-md-4 nav-item">
+              <a class="nav-link con" href="./index.html">News</a>
+            </li>
+            <li class="me-md-4 nav-item">
+              <a class="nav-link con" href="./index.html">Live cameras</a>
+            </li>
+            <li class="me-md-4 nav-item">
+              <a class="nav-link con" href="./index.html">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link con" href="./index.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="part1 py-4">
+        <div class="container">
+          <div class="d-flex pt-5 w-75 m-auto position-relative">
+            <input
+              id="searchLocation"
+              tyme="text"
+              placeholder="Find Your Location..."
+              class="search-country me-2 fs-6 fw-medium" />
+            <button class="btn btn-primary rounded-5 fw-normal">Find</button>
+          </div>
+
+          <div class="mt-5 pt-5">
+            <div class="row" id="rowData">
+              <div class="col-md-4 pb-3">
+                <div class="border border-1 rounded-2">
+                  <div
+                    class="p-2 bg-info bg-opacity-50 rounded-top-2 text-white">
+                    <div class="d-flex justify-content-between">
+                      <h4 class="fs-5" id="todayWeekDayMarkup"></h4>
+                      <h4 class="fs-5" id="dateToday"></h4>
+                    </div>
+                  </div>
+                  <div class="title-card-color px-4 rounded-bottom-2">
+                    <h4 class="py-4 fs-4 text-white" id="cityToday"></h4>
+                    <div class="d-flex justify-content-between py-4">
+                      <h1 class="fw-bold text-white" id="tempToday"></h1>
+                      <img
+                        src="./photo/113.png"
+                        class="img-fluid"
+                        id="todayImg"
+                        alt="img-weather" />
+                    </div>
+                    <h5
+                      class="py-3 fs-5 fw-normal clear-color"
+                      id="todayCond"></h5>
+
+
+                    <div class="d-flex  py-4 text-white">
+                      <div
+                        class="d-flex me-4 justify-content-center align-items-center">
+                        <img
+                          src="./photo/icon-umberella@2x.png"
+                          class="w-50 me-2"
+                          alt="img-weather-humidity" />
+                        <p class="m-0" id="humidityToday"></p>
+                      </div>
+                      <div
+                        class="d-flex me-4 justify-content-center align-items-center">
+                        <img
+                          src="./photo/icon-wind@2x.png"
+                          class="w-50 me-2"
+                          alt="img-weather-wind" />
+                        <p class="m-0" id="todayWind"></p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-center align-items-center">
+                        <img
+                          src="./photo/icon-compass@2x.png"
+                          class="w-50 me-2"
+                          alt="img-weather-direction" />
+                        <p class="m-0" id="dirToday">East</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 pb-3">
+                <div class="border border-1 rounded-2">
+                  <div
+                    class="p-2 bg-info bg-opacity-75 rounded-top-2 text-white">
+                    <h4 class="fs-5 text-center" id="tomm"></h4>
+                  </div>
+                  <div
+                    class="card-color px-4 py-5 rounded-bottom-2 text-center">
+                    <img
+                      src="./photo/113.png"
+                      class="py-4"
+                      alt="img-weather"
+                      id="tommImg" />
+                    <h1 class="fw-normal fs-3 text-white" id="tommMaxTemp"></h1>
+                    <h5 class="fw-light text-white" id="tommMinTemp"></h5>
+
+                    <h5
+                      class="py-4 fs-5 fw-normal clear-color"
+                      id="tommText"></h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 pb-3">
+                <div class="border border-1 rounded-2">
+                  <div
+                    class="p-2 bg-info bg-opacity-50 rounded-top-2 text-white">
+                    <h4 class="fs-5 text-center" id="afterTomm"></h4>
+                  </div>
+                  <div
+                    class="title-card-color px-4 py-5 rounded-bottom-2 text-center">
+                    <img
+                      src="./photo/113.png"
+                      class="py-4"
+                      alt="img-weather"
+                      id="afterTommImg" />
+                    <h1
+                      class="fw-normal fs-3 text-white"
+                      id="afterTommMaxTemp"></h1>
+                    <h5 class="fw-light text-white" id="afterTommMinTemp"></h5>
+
+                    <h5
+                      class="py-4 fs-5 fw-normal clear-color"
+                      id="afterTommText"></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="part2 title-card-color">
+        <div class="container">
+          <div class="pt-3">
+            <div class="d-flex pt-5 w-50 m-auto position-relative">
+              <input
+                tyme="text"
+                placeholder="Enter your email to subscribe..."
+                class="search-country me-2 fs-6 fw-medium" />
+              <button class="btn btn-primary rounded-5 fw-normal">
+                Subscribe
+              </button>
+            </div>
+          </div>
+
+          <div class="py-5 text-center">
+            <a href="#" class="fa-stack con1">
+              <i class="fa-solid fa-circle fa-stack-2x"></i>
+              <i class="fa-brands fa-facebook-f fa-stack-1x fa-inverse"></i>
+            </a>
+
+            <a href="#" class="fa-stack con2">
+              <i class="fa-solid fa-circle fa-stack-2x"></i>
+              <i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i>
+            </a>
+
+            <a href="#" class="fa-stack con3">
+              <i class="fa-solid fa-circle fa-stack-2x"></i>
+              <i class="fa-brands fa-google-plus-g fa-stack-1x fa-inverse"></i>
+            </a>
+
+            <a href="#" class="fa-stack con4">
+              <i class="fa-solid fa-circle fa-stack-2x"></i>
+              <i class="fa-brands fa-pinterest fa-stack-1x fa-inverse"></i>
+            </a>
+
+            <p class="text-secondary pt-4">
+              Copyright 2014 Company name. Designed by Themezy. All rights
+              reserved
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
